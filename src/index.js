@@ -3,7 +3,15 @@ import ReactDOM from 'react-dom';
 
 import App from './components/app/app.jsx';
 
-ReactDOM.render(
-    <App />,
-    document.querySelector(`#root`)
-);
+const init = () => {
+  const settings = {
+    errorsCount: 3,
+  };
+
+  ReactDOM.render(
+      <App errorsCount={settings.errorsCount}/>,
+      document.querySelector(`#root`)
+  );
+};
+
+init();
